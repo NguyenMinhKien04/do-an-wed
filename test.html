@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký và Đăng nhập</title>
+</head>
+<body>
+
+    <div id="signup">
+        <h2>Đăng ký</h2>
+        <label for="username">Tài khoản:</label>
+        <input type="text" id="signup-username" required>
+        <br>
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="signup-password" required>
+        <br>
+        <button onclick="register()">Đăng ký</button>
+    </div>
+
+    <div id="login" style="display: none;">
+        <h2>Đăng nhập</h2>
+        <label for="username">Tài khoản:</label>
+        <input type="text" id="login-username" required>
+        <br>
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="login-password" required>
+        <br>
+        <button onclick="login()">Đăng nhập</button>
+    </div>
+
+    <div id="welcome" style="display: none;">
+        <h2>Chào mừng!</h2>
+        <p id="welcome-message"></p>
+    </div>
+
+    <script>
+        let registeredUsers = {};
+
+// Hàm để in giá trị của localStorage ra Console
+function printLocalStorage() {
+    console.log("Registered Users:", registeredUsers);
+}
+
+// Hàm đăng ký
+function register() {
+    const username = document.getElementById('signup-username').value;
+    const password = document.getElementById('signup-password').value;
+
+    registeredUsers[username] = password;
+
+    document.getElementById('signup').style.display = 'none';
+    document.getElementById('login').style.display = 'block';
+
+    // Gọi hàm để in giá trị của localStorage
+    printLocalStorage();
+}
+
+// Hàm đăng nhập
+function login() {
+    const username = document.getElementById('login-username').value;
+    const password = document.getElementById('login-password').value;
+
+    if (registeredUsers[username] === password) {
+        document.getElementById('login').style.display = 'none';
+        document.getElementById('welcome').style.display = 'block';
+        document.getElementById('welcome-message').innerText = `Chào mừng ${username}!`;
+    } else {
+        alert('Tài khoản hoặc mật khẩu không đúng.');
+    }
+
+    // Gọi hàm để in giá trị của localStorage
+    printLocalStorage();
+}
+    </script>
+
+</body>
+</html>
