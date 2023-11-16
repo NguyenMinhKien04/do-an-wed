@@ -41,6 +41,12 @@
                 var password = document.getElementById('password').value;
                 var confirmPassword = document.getElementById('confirmPassword').value;
 
+                 // Kiểm tra xem cả tài khoản và mật khẩu đã được nhập chưa
+                 if (!email || !password || !confirmPassword) {
+                    alert("Vui lòng nhập đầy đủ thông tin tài khoản và mật khẩu.");
+                    return;
+                 }
+
                 if (password !== confirmPassword) {
                     alert("Mật khẩu không khớp!");
                     return;
