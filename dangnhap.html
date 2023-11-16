@@ -42,6 +42,12 @@
 
                 var registeredAccountString = localStorage.getItem('registeredAccount');
 
+                 // Kiểm tra xem cả tài khoản và mật khẩu đã được nhập chưa
+                 if (!emailDangNhap || !passwordDangNhap) {
+                    alert("Vui lòng nhập đầy đủ thông tin tài khoản và mật khẩu.");
+                    return;
+                 }
+
                 if (!registeredAccountString) {
                     alert("Chưa có tài khoản đăng ký.");
                     return;
