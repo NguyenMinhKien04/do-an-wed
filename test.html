@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng ký và Đăng nhập</title>
 </head>
+
 <body>
 
     <div id="signup">
@@ -37,42 +39,43 @@
     <script>
         let registeredUsers = {};
 
-// Hàm để in giá trị của localStorage ra Console
-function printLocalStorage() {
-    console.log("Registered Users:", registeredUsers);
-}
+        // Hàm để in giá trị của localStorage ra Console
+        function printLocalStorage() {
+            console.log("Registered Users:", registeredUsers);
+        }
 
-// Hàm đăng ký
-function register() {
-    const username = document.getElementById('signup-username').value;
-    const password = document.getElementById('signup-password').value;
+        // Hàm đăng ký
+        function register() {
+            const username = document.getElementById('signup-username').value;
+            const password = document.getElementById('signup-password').value;
 
-    registeredUsers[username] = password;
+            registeredUsers[username] = password;
 
-    document.getElementById('signup').style.display = 'none';
-    document.getElementById('login').style.display = 'block';
+            document.getElementById('signup').style.display = 'none';
+            document.getElementById('login').style.display = 'block';
 
-    // Gọi hàm để in giá trị của localStorage
-    printLocalStorage();
-}
+            // Gọi hàm để in giá trị của localStorage
+            printLocalStorage();
+        }
 
-// Hàm đăng nhập
-function login() {
-    const username = document.getElementById('login-username').value;
-    const password = document.getElementById('login-password').value;
+        // Hàm đăng nhập
+        function login() {
+            const username = document.getElementById('login-username').value;
+            const password = document.getElementById('login-password').value;
 
-    if (registeredUsers[username] === password) {
-        document.getElementById('login').style.display = 'none';
-        document.getElementById('welcome').style.display = 'block';
-        document.getElementById('welcome-message').innerText = `Chào mừng ${username}!`;
-    } else {
-        alert('Tài khoản hoặc mật khẩu không đúng.');
-    }
+            if (registeredUsers[username] === password) {
+                document.getElementById('login').style.display = 'none';
+                document.getElementById('welcome').style.display = 'block';
+                document.getElementById('welcome-message').innerText = `Chào mừng ${username}!`;
+            } else {
+                alert('Tài khoản hoặc mật khẩu không đúng.');
+            }
 
-    // Gọi hàm để in giá trị của localStorage
-    printLocalStorage();
-}
+            // Gọi hàm để in giá trị của localStorage
+            printLocalStorage();
+        }
     </script>
 
 </body>
+
 </html>
