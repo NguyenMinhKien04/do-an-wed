@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <h2>Cửa hàng bánh Chocola</h2>
+    <a href="testgiohang1.html"><h3>Các loại Chocola</h3></a>
+    <table border="1" id="mathang">
+        <tr id="r1">
+            <td id="00">Chocolate Truffles</td>
+            <td id="01">$34.99</td>
+            <td id="02">
+                <input type="button" onclick="addItem(0); doiMau(0, true);" value="Thêm" />
+            </td>
+        </tr>
+        <tr id="r2">
+            <td id="10">Pecan Caramel Duets</td>
+            <td id="11">$14.99</td>
+            <td id="12">
+                <input type="button" onclick="addItem(1); doiMau(1, true);" value="Thêm" />
+            </td>
+        </tr>
+        <tr id="r3">
+            <td id="20">Chocolate Covered Cherries</td>
+            <td id="21">$28.99</td>
+            <td id="22">
+                <input type="button" onclick="addItem(2); doiMau(2, true);" value="Thêm" />
+            </td>
+        </tr>
+        <tr id="r4">
+            <td id="30">White Chocolate Ganaches</td>
+            <td id="31">$22.99</td>
+            <td id="32">
+                <input type="button" onclick="addItem(3); doiMau(3, true);" value="Thêm" />
+            </td>
+        </tr>
+        <tr id="r5">
+            <td id="40">Chocolate Mints</td>
+            <td id="41">$17.99</td>
+            <td id="42">
+                <input type="button" onclick="addItem(4); doiMau(4, true);" value="Thêm" />
+            </td>
+        </tr>
+        <tr id="r6">
+            <td id="50">Chocolate caramels</td>
+            <td id="51">$11.99</td>
+            <td id="52">
+                <input type="button" onclick="addItem(5); doiMau(5, true);" value="Thêm" />
+            </td>
+        </tr>
+        <tr id="r7">
+            <td id="60">Chocolate Toffee Bark</td>
+            <td id="61">$9.99</td>
+            <td id="62">
+                <input type="button" onclick="addItem(6); doiMau(6, true);" value="Thêm" />
+            </td>
+        </tr>
+    </table>
+    <h3>Giỏ hàng của bạn</h3>
+    <table id="giohang" border="1">
+        <tr id="empty">
+            <td id="00">Giỏ hàng của bạn chưa có mặt hàng nào</td>
+        </tr>
+    </table>
+    <h4 id="tien">Tổng số tiền:</h4>
+    <script src="testgiohang.js">
+       
+    </script>
+</body>
+
+</html>
