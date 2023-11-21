@@ -8,7 +8,7 @@
 
 <body>
     <h2>Cửa hàng bánh Chocola</h2>
-    <h3>Các loại Chocola</h3>
+    <a href="testgiohang1.html"><h3>Các loại Chocola</h3></a>
     <table border="1" id="mathang">
         <tr id="r1">
             <td id="00">Chocolate Truffles</td>
@@ -67,67 +67,8 @@
         </tr>
     </table>
     <h4 id="tien">Tổng số tiền:</h4>
-    <script>
-        var autoId = 100;
-        var soHangTrongGio = 0;
-        var tongTien = 0;
-        function addItem(rowIndex) {
-            document.getElementById("empty").style.display = "none";
-            soHangTrongGio++;
-            //Lấy dòng vừa click "thêm" vào bộ nhớ dựa vào rowIndex truyền vào
-            var selectedRow = document.getElementById("mathang").rows[rowIndex];
-            //Lấy giá của sản phẩm được chọn
-            var donGia =
-                document.getElementById("mathang").rows[rowIndex].cells[1].innerHTML;
-            donGia = Number(donGia.substring(1));
-            tongTien = tongTien + donGia;
-            capNhatGia();
-            //Lấy table cần thêm dòng vào bộ nhớ để xử lý
-            var tableGioHang = document.getElementById("giohang");
-            //Thêm một dòng vào cuối table giỏ hàng
-            var newRow = tableGioHang.insertRow(tableGioHang.rows.length);
-            newRow.id = autoId; //Đặt id của dòng mới thêm vào
-            //thêm các ô vào dòng vừa thêm
-            var nameCell = newRow.insertCell(0);
-            nameCell.innerHTML = selectedRow.cells[0].innerHTML;
-            var priceCell = newRow.insertCell(1);
-            priceCell.innerHTML = selectedRow.cells[1].innerHTML;
-            var actionCell = newRow.insertCell(2);
-            actionCell.innerHTML =
-                '<input type="button" onclick="removeItem(' +
-                autoId +
-                "); doiMau(" +
-                rowIndex +
-                ',false);" value="Xóa" />';
-            autoId++; //tăng autoid lên 1
-        }
-        function doiMau(rowIndex, check) {
-            if (check == true) {
-                document.getElementById("mathang").rows[rowIndex].style.color =
-                    "blue";
-            } else {
-                document.getElementById("mathang").rows[rowIndex].style.color =
-                    "black";
-            }
-        }
-        function capNhatGia() {
-            document.getElementById("tien").innerHTML =
-                "Tổng số tiền: $" + tongTien.toFixed(2);
-        }
-        function removeItem(id) {
-            var rowIndex = document.getElementById(id).rowIndex;
-            var donGia = document.getElementById(id).cells[1].innerHTML;
-            donGia = Number(donGia.substring(1));
-            tongTien = tongTien - donGia;
-            capNhatGia();
-            var selectedRow = document
-                .getElementById("giohang")
-                .deleteRow(rowIndex);
-            soHangTrongGio--;
-            if (soHangTrongGio == 0) {
-                document.getElementById("empty").style.display = "inline";
-            }
-        }
+    <script src="testgiohang.js">
+       
     </script>
 </body>
 
