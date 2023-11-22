@@ -42,7 +42,7 @@
                 var emailDangNhap = document.getElementById('emailDangNhap').value;
                 var passwordDangNhap = document.getElementById('passwordDangNhap').value;
 
-                var registeredAccountString = localStorage.getItem('registeredAccount');
+                var accountString = localStorage.getItem('registeredAccount');
 
                 // Kiểm tra xem cả tài khoản và mật khẩu đã được nhập chưa
                 if (!emailDangNhap || !passwordDangNhap) {
@@ -50,19 +50,27 @@
                     return;
                 }
 
-                if (!registeredAccountString) {
+                if (!accountString) {
                     alert("Chưa có tài khoản đăng ký.");
                     return;
                 }
 
-                var registeredAccount = JSON.parse(registeredAccountString);
+                var accounts = JSON.parse(accountString);
 
-                if (emailDangNhap === registeredAccount.email && passwordDangNhap === registeredAccount.password) {
-                    console.log("Đăng nhập thành công!");
-                    window.location.href = "web1.html";
-                } else {
-                    alert("Đăng nhập không thành công. Vui lòng kiểm tra lại thông tin đăng nhập.");
+                for (var i = 0; i < accounts.length; i++) {
+                    if (accounts[i].email === emailDangNhap && accounts[i].password === passwordDangNhap) {
+                        if (accounts[i].isAdmin) {
+                            alert("Đăng nhập với quyền admin!");
+                            window.location.href = "web1.html";
+                        } else {
+                            alert("Đăng nhập thành công!");
+                            window.location.href = "web1.html";
+                        }
+                        return;
+                    }
                 }
+
+                alert("Đăng nhập không thành công. Vui lòng kiểm tra lại thông tin đăng nhập.");
             }
         </script>
     </div>
