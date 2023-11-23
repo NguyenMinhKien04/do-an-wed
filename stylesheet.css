@@ -653,7 +653,7 @@ padding: 5px 0;
    width: 25%;
 }
 .in-footer-body-left li{
-   position: relative;
+   
    display: inline-table;
    margin-left: 5px;
 }
@@ -672,7 +672,7 @@ padding: 5px 0;
    width: 25%;
 }
 .in-footer-body-right li{
-   position: relative;
+  
    display: inline-table;
    margin-left: 5px;
 }
@@ -725,6 +725,7 @@ padding: 5px 0;
 .display-top{
    background-color: #ba3434;
    width: 80rem;
+   display: block;
 }
    .menu-bar{
       display: none;
@@ -737,4 +738,6 @@ padding: 5px 0;
    }
  }
 
- 
+ .display-top{
+   display: none;
+ }
