@@ -47,9 +47,9 @@
 
             var currentCart = JSON.parse(localStorage.getItem('cart')) || [];
             currentCart.push(cartItem);
-            localStorage.setItem('cart', JSON.stringify(currentCart));
+            localStorage.setItem('cart', JSON.stringify(currentCart));   
         }
-
+        
         function doiMau(rowIndex, check) {
             if (check == true) {
                 document.getElementById("mathang").rows[rowIndex].style.color =
@@ -71,9 +71,7 @@
             donGia = Number(donGia.substring(1));
             tongTien = tongTien - donGia;
             capNhatGia();
-            var selectedRow = document
-                .getElementById("giohang")
-                .deleteRow(rowIndex);
+            var selectedRow = document.getElementById("giohang").deleteRow(rowIndex);
             soHangTrongGio--;
             if (soHangTrongGio == 0) {
                 document.getElementById("empty").style.display = "inline";

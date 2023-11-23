@@ -54,8 +54,26 @@
                     return;
                 }
 
-                var account = { email: email, password: password };
-                localStorage.setItem('registeredAccount', JSON.stringify(account));
+
+              
+                var accountStorage = JSON.parse(localStorage.getItem('registeredAccount')) || [];
+              
+                // Kiểm tra xem tài khoản đã tồn tại chưa
+                 for (var i = 0; i < accountStorage.length; i++) {
+                    if (accountStorage[i].email === email) {
+                        alert("Tài khoản đã tồn tại.");
+                        return;
+                    }
+                }
+
+                // Kiểm tra xem tài khoản có phải là admin không
+                var isAdmin = (email === "admin" && password === "admin");
+ 
+                var account = { email: email, password: password, isAdmin: isAdmin };
+
+                accountStorage.push(account);
+
+                localStorage.setItem('registeredAccount', JSON.stringify(accountStorage));
 
                 window.location.href = "dangnhap.html";
             }
