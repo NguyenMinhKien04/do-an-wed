@@ -67,8 +67,12 @@
                 }
 
                 // Kiểm tra xem tài khoản có phải là admin không
+                // isAdmin la kiểu boolean
                 var isAdmin = (email === "admin" && password === "admin");
- 
+                //khi goi ben login accounts[i].isAdmin phai goi truoc dau :   sau dau : là kiểu boolean
+                // sau : là tất cả kiểu var
+                // truoc : là kiểu gọi khi vd: accounts[i].email// hieu dai khai la khi goi nhu vay no se lay gia tri la email sau dau : de so sanh, giong nhu boolean
+                // sau dau : là var và emailDangNhap cx la var nen suy ra var la gia tri,,,...
                 var account = { email: email, password: password, isAdmin: isAdmin };
 
                 accountStorage.push(account);

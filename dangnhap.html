@@ -58,7 +58,10 @@
                 var accounts = JSON.parse(accountString);
 
                 for (var i = 0; i < accounts.length; i++) {
-                    if (accounts[i].email === emailDangNhap && accounts[i].password === passwordDangNhap) {
+                      // truoc : là kiểu gọi khi vd: accounts[i].email// hieu dai khai la khi goi nhu vay no se lay gia tri la email sau dau : de so sanh, giong nhu boolean
+                      // sau dau : là var và emailDangNhap cx la var nen suy ra var la gia tri,,,...
+                    if (accounts[i].email === emailDangNhap && accounts[i].password === passwordDangNhap) { 
+                        //khi goi ben login accounts[i].isAdmin phai goi truoc dau : de kiem tra, sau dau : la kiểu boolean
                         if (accounts[i].isAdmin) {
                             alert("Đăng nhập với quyền admin!");
                             window.location.href = "https://www.facebook.com/profile.php?id=100021947714995";
