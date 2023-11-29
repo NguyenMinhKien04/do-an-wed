@@ -1,6 +1,22 @@
+*{
+   margin:  0;
+   padding: 0;
+   
+}
 
+#wrapper{
+   width: 80rem;
+   margin: auto;
+   
+}
+
+.in-top{
+   background-color: rgb(4,27,58);
+   display: flex;
+   justify-content: center;
+}
 body {
-   background-color:  rgb(232, 232, 232);
+   background-color:  rgb(249, 249, 249);
    width: auto;
    margin: auto;
    font-family: Arial, Helvetica, sans-serif;
@@ -317,4 +333,79 @@ background-color: rgb(200, 69, 69);
 }
 .bottom-pay p{
    font-weight: normal;
+}
+/*----------------------------*/
+.footer{
+   background-color: white ;
+}
+.footer li{
+list-style: none;
+padding: 5px 0;
+}
+
+.footer a{
+   text-decoration: none;
+   color: black;
+}
+
+.footer a:hover{
+   color: rgb(12, 12, 127);
+}
+
+.book{
+   color: blue;
+}
+
+.book:hover{
+   text-decoration: underline;
+}
+/*-------------------*/
+.in-footer-top{
+   padding: 10px 5px;
+}
+
+/*-------------------------*/
+.in-footer-body{
+   
+   margin-top: 10px;
+   margin-bottom: 10px;
+   display: flex;
+   justify-content: space-evenly;
+}
+
+
+.in-footer-body p{
+   font-weight: bold;
+   font-size: 20px;
+}
+.in-footer-body-left{
+   width: 25%;
+}
+.in-footer-body-left li{
+   
+   display: inline-table;
+   margin-left: 5px;
+}
+
+.in-footer-body-mid{
+   width: 25%;
+}
+.in-footer-body-mid p{
+   margin-bottom: 2px;
+}
+.in-footer-body-mid1 li{
+   padding: 2px;
+}
+
+.in-footer-body-right{
+   width: 25%;
+}
+.in-footer-body-right li{
+  
+   display: inline-table;
+   margin-left: 5px;
+}
+.in-footer-body a:hover{
+   color: rgb(0, 0, 209);
+   text-decoration: underline;
 }
