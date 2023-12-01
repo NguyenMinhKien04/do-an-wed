@@ -568,6 +568,7 @@ margin-right: 20px;
 #category2{
    display: none;
 }
+
 /*------------------*/
 
 .footer{
@@ -667,8 +668,69 @@ padding: 5px 0;
    #backtop:hover {
    background-color: rgb(253, 123, 123)
    }
-
-
+/*--------------Modal---------------*/
+.nenmodal .nenmodal2 {
+   position:fixed;
+   top:0px;
+   left:0px;
+   width:100vw;
+   height:100vh;
+   background:rgba(0,0,0,0.7);
+   z-index:1;
+   display:none;
+   }
+   /* CSS bảng nội dung Modal */
+   .ndmodal img{
+      width: 100%;
+     
+   }
+   .nenmodal .ndmodal {
+   position:absolute;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%) scale(0);
+   background:#ffffff;
+   width:700px;
+   
+   z-index:2;
+   text-align:center;
+   box-sizing:border-box;
+   font-family:"Open Sans",sans-serif;
+  
+   display: block;
+   position: fixed;
+   box-shadow:0px 0px 10px #111;
+   }
+   @media (max-width: 700px) {
+   .nenmodal .ndmodal {width:90%;}
+   }
+   /* CSS bao bọc của nút tắt Modal */
+   .nenmodal .closemodal {
+   text-align:center;
+   margin-top:-40px;
+   
+   }
+   /* CSS tieu de của Modal */
+  
+   /* CSS nút tắt modal */
+   .closemodal button{
+   width:40px;
+   height:40px;
+   font-size:30px;
+   padding:0px;
+   border-radius:100%;
+   background:#333;
+   color:#fff;
+   border:none;
+   }
+   .nenmodal.active .nenmodal2 {
+   display:block;
+   }
+   /* CSS hiệu ứng hiển thị Modal */
+   .nenmodal.active .ndmodal {
+   transition:all 300ms ease-in-out;
+   transform:translate(-50%,-50%) scale(1);
+   }
    /*Responsive*/
    @media (max-width:1283px) {
 
