@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel=" stylesheet" href="/css/stylesheet.css">
     <link rel=" stylesheet" href="stylefont.css">
     <!--test-->   
-    <link rel=" stylesheet" href="web2.css">
+    
     <script src="./vendor/fontawesome/js/all.min.js" ></script>
     <script src="."></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,40 +17,6 @@
 <body>
 
 
-   <div class="display-top">
-    <div class="in-display-top">
-        <div class="in-display-top-logo">
-            <a href="#"><img src="/IMG/logo-new.png"></a>
-        </div>
-            <div class="in-display-top-bottom">
-        <div class="in-display-top-menu"><i class="fa-solid fa-bars"></i></div>
-       
-        <div class="box">
-            
-            <div class="container-1">
-                <span class="icon"><i class="fa fa-search"></i></span>
-                <input type="search" id="search" placeholder="Search..." />
-            </div>
-          </div>
-
-          <div class="menu-right">
-            <div class="top-right">
-                <div class="top-right-item">
-                   <a href="dangki.html"><i class="fa-solid fa-user"></i><p>Dang ki</p></a>  
-                </div>
-               <div class="top-right-item">
-                <a href="dangnhap.html"><i class="fa-solid fa-lock"></i><p>Dang nhap</p></a>
-               </div>
-                 <div class="top-right-item">
-            <a href = "/Page2.html"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
-            <p>Giỏ hàng</p>
-           </div>
-            </div>
-          
-          </div>
-          </div>
-    </div>
-   </div>
 
 
 
@@ -258,6 +225,7 @@
     </div>
  </div> 
 <div id=wrapper>
+    <div class="in-wrapper">
 
 <!--------------Modal--------------->
 <div class="nenmodal" id="nenmodal-1">
@@ -284,7 +252,7 @@
     <div class="in-slider1">
 <div class="slidebody">
     <div class="in-slidebody-left">
-        <a href="#"><img src="/IMG/slide3.jpg"></a>
+        <a href="#"><img src="/IMG/left-top.jpg"></a>
         <a href="#"><img src="/IMG/slide2.jpg"></a>
     </div>
     <div class="in-slidebody-right">
@@ -305,8 +273,10 @@
             <div class="slide">
                 <a href="#"><img src="/IMG/slide1.jpg" ></a>
             </div>
-            
+
+        
         </div>
+        
     </div>
     </div>
 </div>
@@ -316,10 +286,10 @@
 <div class="slider2">
     <div class="in-slider2">
     <ul>
-        <li><a href="#"><img src="/IMG/3.png" width="100%"></a></li>
-        <li><a href="#"><img src="/IMG/4.jpg" width="100%"></a></li>
-        <li><a href="#"><img src="/IMG/3.png" width="100%"></a></li>
-        <li><a href="#"><img src="/IMG/4.jpg" width="100%"></a></li>
+        <li><a href="#"><img src="/IMG/3.png" ></a></li>
+        <li><a href="#"><img src="/IMG/2.png" ></a></li>
+        <li><a href="#"><img src="/IMG/3.png" ></a></li>
+        <li><a href="#"><img src="/IMG/4.png"></a></li>
     </ul>
     </div>
 </div>
@@ -327,12 +297,14 @@
 <div id="slider3">
     <div class="in-slider3">
     <ul>
-        <li><a href="#"><img src="/IMG/thecao.png" width="60%"><p>Theo cao</p></a></li>
-        <li><a href="#"><img src="/IMG/giamgia.png"width="60%"><p>Phieu giam gia</p></a></li>
-        <li><a href="#"><img src="/IMG/thieunhi.png"width="60%"><p>Thieu nhi</p></a></li>
-        <li><a href="#"><img src="/IMG/toy.png"width="60%"><p>do choi</p></a></li>
-        <li><a href="#"><img src="/IMG/cho.png"width="60%"><p>Phien cho cu</a></li>
-        <li><a href="#"><img src="/IMG/sanphamoi.png"width="60%"><p>San pham moi</p></a></li>
+        <li><a href="#"><img src="/IMG/YearAndSale.png" width="50%"><p>Year And Sale</p></a></li>
+        <li><a href="#"><img src="/IMG/donkho.png"width="50%"><p>Dọn kho</p></a></li>
+        <li><a href="#"><img src="/IMG/giamgia.png"width="50%"><p>Phieu giam gia</p></a></li>
+        <li><a href="#"><img src="/IMG/thieunhi.png"width="50%"><p>Thieu nhi</p></a></li>
+        <li><a href="#"><img src="/IMG/Giangsinh"width="50%"><p>Giáng sinh</p></a></li>
+        <li><a href="#"><img src="/IMG/cho.png"width="50%"><p>Phien cho cu</p></a></li>
+        <li><a href="#"><img src="/IMG/sanphamoi.png"width="50%"><p>San pham moi</p></a></li>
+        <li><a href="#"><img src="/IMG/flash.png"width="50%"><p>San pham moi</p></a></li>
     </ul>
     </div>
 </div>
@@ -576,85 +548,22 @@
 
 
 
-
-
-<div class="slider6">
+    <div class="slider6">
         <div class="in-slider6-top">
-            <button type="button" onclick="show()" id="btnID">Manga mới</button>
-            <button type="button" onclick="show()" id="btnID">Live Novel mới</button>
+            <button type="button" onclick="showCategory('category1')">Manga mới</button>
+            <button type="button" onclick="showCategory('category2')">Live Novel mới</button>
         </div>
-           <section id="category1" class="product_love">
-            <div class="in-slider6-bottom-top-right">
 
-                <!---------------------------------------->
-                <div class="in-slider6-picture">
-                    <div class="in-slider6-picture-product">
-                        <div class="in-slider6-picture-product-image">
-                            <a href="#"><img src="/IMG/in-pic1.jpg"></a>
-                        </div>
-                        <div class="in-slider6-picture-product-image-bottom">
-                            <div class="in-slider6-title">
-                                <a href="#">Thỏ bảy màu và những người nghĩ nó là bạn </a>
-                            </div>
-                            <div class="in-slider6-price">
-                                <ul>
-                                    <li><p>17.000d</p></li>
-                                    <li><p><strike>20.000d</strike></p><div class="price-down"><p>-15%</p></div></li>
-                                </ul>    
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-<!---------------------------------------->
-<div class="in-slider6-picture">
+        <section id="category1" class="product_love">
+        <!-------------------------------------------->
+           <div class="in-slider6-picture">
     <div class="in-slider6-picture-product">
         <div class="in-slider6-picture-product-image">
             <a href="#"><img src="/IMG/in-pic1.jpg"></a>
         </div>
         <div class="in-slider6-picture-product-image-bottom">
             <div class="in-slider6-title">
-                <a href="#">Thỏ bảy màu và những người nghĩ nó là bạn </a>
-            </div>
-            <div class="in-slider6-price">
-                <ul>
-                    <li><p>17.000d</p></li>
-                    <li><p><strike>20.000d</strike></p><div class="price-down"><p>-15%</p></div></li>
-                </ul>    
-            </div>
-        </div>
-    </div>
-</div>
-                
-               <!---------------------------------------->
-               <div class="in-slider6-picture">
-                <div class="in-slider6-picture-product">
-                    <div class="in-slider6-picture-product-image">
-                        <a href="#"><img src="/IMG/in-pic1.jpg"></a>
-                    </div>
-                    <div class="in-slider6-picture-product-image-bottom">
-                        <div class="in-slider6-title">
-                            <a href="#">Thỏ bảy màu và những người nghĩ nó là bạn </a>
-                        </div>
-                        <div class="in-slider6-price">
-                            <ul>
-                                <li><p>17.000d</p></li>
-                                <li><p><strike>20.000d</strike></p><div class="price-down"><p>-15%</p></div></li>
-                            </ul>    
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-<!---------------------------------------->
-<div class="in-slider6-picture">
-    <div class="in-slider6-picture-product">
-        <div class="in-slider6-picture-product-image">
-            <a href="#"><img src="/IMG/in-pic1.jpg"></a>
-        </div>
-        <div class="in-slider6-picture-product-image-bottom">
-            <div class="in-slider6-title">
-                <a href="#">Thỏ bảy màu và những người nghĩ nó là bạn </a>
+                <a href="#">Thỏ bảy màu và những người nghĩ nó là bạn</a>
             </div>
             <div class="in-slider6-price">
                 <ul>
@@ -670,35 +579,15 @@
 <div class="in-slider6-picture">
     <div class="in-slider6-picture-product">
         <div class="in-slider6-picture-product-image">
-            <a href="#"><img src="/IMG/in-pic1.jpg"></a>
+            <a href="#"><img src="/IMG/in-pic5.jpg"></a>
         </div>
         <div class="in-slider6-picture-product-image-bottom">
             <div class="in-slider6-title">
-                <a href="#">Thỏ bảy màu và những người nghĩ nó là bạn </a>
+                <a href="#">Spy X Family - Tập 9</a>
             </div>
             <div class="in-slider6-price">
                 <ul>
-                    <li><p>17.000d</p></li>
-                    <li><p><strike>20.000d</strike></p><div class="price-down"><p>-15%</p></div></li>
-                </ul>    
-            </div>
-        </div>
-    </div>
-</div>
-
-<!---------------------------------------->
-<div class="in-slider6-picture">
-    <div class="in-slider6-picture-product">
-        <div class="in-slider6-picture-product-image">
-            <a href="#"><img src="/IMG/in-pic1.jpg"></a>
-        </div>
-        <div class="in-slider6-picture-product-image-bottom">
-            <div class="in-slider6-title">
-                <a href="#">Thỏ bảy màu và những người nghĩ nó là bạn </a>
-            </div>
-            <div class="in-slider6-price">
-                <ul>
-                    <li><p>17.000d</p></li>
+                    <li><p>130.000d</p></li>
                     <li><p><strike>20.000d</strike></p><div class="price-down"><p>-15%</p></div></li>
                 </ul>    
             </div>
@@ -709,15 +598,15 @@
 <div class="in-slider6-picture">
     <div class="in-slider6-picture-product">
         <div class="in-slider6-picture-product-image">
-            <a href="#"><img src="/IMG/in-pic1.jpg"></a>
+            <a href="#"><img src="/IMG/in-pic6.jpg"></a>
         </div>
         <div class="in-slider6-picture-product-image-bottom">
             <div class="in-slider6-title">
-                <a href="#">Thỏ bảy màu và những người nghĩ nó là bạn </a>
+                <a href="#">Nhóc Miko! Cô Bé Nhí Nhảnh - Tập 37 </a>
             </div>
             <div class="in-slider6-price">
                 <ul>
-                    <li><p>17.000d</p></li>
+                    <li><p>23.500d</p></li>
                     <li><p><strike>20.000d</strike></p><div class="price-down"><p>-15%</p></div></li>
                 </ul>    
             </div>
@@ -728,11 +617,11 @@
 <div class="in-slider6-picture">
     <div class="in-slider6-picture-product">
         <div class="in-slider6-picture-product-image">
-            <a href="#"><img src="/IMG/in-pic1.jpg"></a>
+            <a href="#"><img src="/IMG/in-pic7.jpg"></a>
         </div>
         <div class="in-slider6-picture-product-image-bottom">
             <div class="in-slider6-title">
-                <a href="#">Thỏ bảy màu và những người nghĩ nó là bạn </a>
+                <a href="#">Thám tử lừng danh Conan - Tập 101 </a>
             </div>
             <div class="in-slider6-price">
                 <ul>
@@ -742,88 +631,102 @@
             </div>
         </div>
     </div>
-</div>
-            </div> 
-       
-
-</section>
-
-<section id="category2" class="product_love">
-    <div class="in-slider6-bottom-top-right">
-
-        <!---------------------------------------->
-        <div class="in-slider6-picture">
-            <div class="in-slider6-picture-product">
-                <div class="in-slider6-picture-product-image">
-                    <a href="#"><img src="/IMG/in-pic2.jpg"></a>
-                </div>
-                <div class="in-slider6-picture-product-image-bottom">
-                    <div class="in-slider6-title">
-                        <a href="#">Thỏ bảy màu và những người nghĩ nó là bạn </a>
-                    </div>
-                    <div class="in-slider6-price">
-                        <ul>
-                            <li><p>17.000d</p></li>
-                            <li><p><strike>20.000d</strike></p><div class="price-down"><p>-15%</p></div></li>
-                        </ul>    
-                    </div>
-                </div>
-            </div>
-        </div>
-
-<!---------------------------------------->
-<div class="in-slider6-picture">
-<div class="in-slider6-picture-product">
-<div class="in-slider6-picture-product-image">
-    <a href="#"><img src="/IMG/in-pic1.jpg"></a>
-</div>
-<div class="in-slider6-picture-product-image-bottom">
-    <div class="in-slider6-title">
-        <a href="#">Thỏ bảy màu và những người nghĩ nó là bạn </a>
-    </div>
-    <div class="in-slider6-price">
-        <ul>
-            <li><p>17.000d</p></li>
-            <li><p><strike>20.000d</strike></p><div class="price-down"><p>-15%</p></div></li>
-        </ul>    
-    </div>
-</div>
-</div>
 </div>
         
-       <!---------------------------------------->
-       <div class="in-slider6-picture">
-        <div class="in-slider6-picture-product">
-            <div class="in-slider6-picture-product-image">
-                <a href="#"><img src="/IMG/in-pic1.jpg"></a>
+<!-------------------------------------------->
+<div class="in-slider6-picture">
+    <div class="in-slider6-picture-product">
+        <div class="in-slider6-picture-product-image">
+            <a href="#"><img src="/IMG/in-pic10.jpg"></a>
+        </div>
+        <div class="in-slider6-picture-product-image-bottom">
+            <div class="in-slider6-title">
+                <a href="#">Thám Tử Lừng Danh Conan - Tập 100 </a>
             </div>
-            <div class="in-slider6-picture-product-image-bottom">
-                <div class="in-slider6-title">
-                    <a href="#">Thỏ bảy màu và những người nghĩ nó là bạn </a>
-                </div>
-                <div class="in-slider6-price">
-                    <ul>
-                        <li><p>17.000d</p></li>
-                        <li><p><strike>20.000d</strike></p><div class="price-down"><p>-15%</p></div></li>
-                    </ul>    
-                </div>
+            <div class="in-slider6-price">
+                <ul>
+                    <li><p>23.000d</p></li>
+                    <li><p><strike>20.000d</strike></p><div class="price-down"><p>-15%</p></div></li>
+                </ul>    
             </div>
         </div>
     </div>
+</div>
 
 <!---------------------------------------->
 <div class="in-slider6-picture">
+    <div class="in-slider6-picture-product">
+        <div class="in-slider6-picture-product-image">
+            <a href="#"><img src="/IMG/in-pic8.jpg"></a>
+        </div>
+        <div class="in-slider6-picture-product-image-bottom">
+            <div class="in-slider6-title">
+                <a href="#">Oshi No Ko - Dưới Ánh Hào Quang - Tập 1</a>
+            </div>
+            <div class="in-slider6-price">
+                <ul>
+                    <li><p>17.000d</p></li>
+                    <li><p><strike>20.000d</strike></p><div class="price-down"><p>-15%</p></div></li>
+                </ul>    
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------------------------------->
+<div class="in-slider6-picture">
+    <div class="in-slider6-picture-product">
+        <div class="in-slider6-picture-product-image">
+            <a href="#"><img src="/IMG/in-pic-9.jpg"></a>
+        </div>
+        <div class="in-slider6-picture-product-image-bottom">
+            <div class="in-slider6-title">
+                <a href="#">BlueLock - Tập 17 </a>
+            </div>
+            <div class="in-slider6-price">
+                <ul>
+                    <li><p>32.500d</p></li>
+                    <li><p><strike>20.000d</strike></p><div class="price-down"><p>-15%</p></div></li>
+                </ul>    
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------------------------------->
+<div class="in-slider6-picture">
+    <div class="in-slider6-picture-product">
+        <div class="in-slider6-picture-product-image">
+            <a href="#"><img src="/IMG/in-pic11.jpg"></a>
+        </div>
+        <div class="in-slider6-picture-product-image-bottom">
+            <div class="in-slider6-title">
+                <a href="#">Thanh Gươm Diệt Quỷ </a>
+            </div>
+            <div class="in-slider6-price">
+                <ul>
+                    <li><p>23.500d</p></li>
+                    <li><p><strike>20.000d</strike></p><div class="price-down"><p>-15%</p></div></li>
+                </ul>    
+            </div>
+        </div>
+    </div>
+</div>
+        </section>
+<!--------------Section2---------------->
+
+        <section id="category2" class="product_love">
+       
+<div class="in-slider6-picture">
 <div class="in-slider6-picture-product">
 <div class="in-slider6-picture-product-image">
-    <a href="#"><img src="/IMG/in-pic1.jpg"></a>
+    <a href="#"><img src="/IMG/in-pic2.jpg"></a>
 </div>
 <div class="in-slider6-picture-product-image-bottom">
     <div class="in-slider6-title">
-        <a href="#">Thỏ bảy màu và những người nghĩ nó là bạn </a>
+        <a href="#">Và Rồi, Tháng 9 Không Có Cậu Đã Tới </a>
     </div>
     <div class="in-slider6-price">
         <ul>
-            <li><p>17.000d</p></li>
+            <li><p>122.000d</p></li>
             <li><p><strike>20.000d</strike></p><div class="price-down"><p>-15%</p></div></li>
         </ul>    
     </div>
@@ -835,35 +738,15 @@
 <div class="in-slider6-picture">
 <div class="in-slider6-picture-product">
 <div class="in-slider6-picture-product-image">
-    <a href="#"><img src="/IMG/in-pic1.jpg"></a>
+    <a href="#"><img src="/IMG/in-pic12.jpg"></a>
 </div>
 <div class="in-slider6-picture-product-image-bottom">
     <div class="in-slider6-title">
-        <a href="#">Thỏ bảy màu và những người nghĩ nó là bạn </a>
+        <a href="#">Nhật Kí Ấm Áp - Báo Mùa Hoa Vẻ </a>
     </div>
     <div class="in-slider6-price">
         <ul>
-            <li><p>17.000d</p></li>
-            <li><p><strike>20.000d</strike></p><div class="price-down"><p>-15%</p></div></li>
-        </ul>    
-    </div>
-</div>
-</div>
-</div>
-
-<!---------------------------------------->
-<div class="in-slider6-picture">
-<div class="in-slider6-picture-product">
-<div class="in-slider6-picture-product-image">
-    <a href="#"><img src="/IMG/in-pic1.jpg"></a>
-</div>
-<div class="in-slider6-picture-product-image-bottom">
-    <div class="in-slider6-title">
-        <a href="#">Thỏ bảy màu và những người nghĩ nó là bạn </a>
-    </div>
-    <div class="in-slider6-price">
-        <ul>
-            <li><p>17.000d</p></li>
+            <li><p>107.000d</p></li>
             <li><p><strike>20.000d</strike></p><div class="price-down"><p>-15%</p></div></li>
         </ul>    
     </div>
@@ -874,15 +757,15 @@
 <div class="in-slider6-picture">
 <div class="in-slider6-picture-product">
 <div class="in-slider6-picture-product-image">
-    <a href="#"><img src="/IMG/in-pic1.jpg"></a>
+    <a href="#"><img src="/IMG/in-pic13.jpg"></a>
 </div>
 <div class="in-slider6-picture-product-image-bottom">
     <div class="in-slider6-title">
-        <a href="#">Thỏ bảy màu và những người nghĩ nó là bạn </a>
+        <a href="#">Nhật Kí Ấm Áp - Lưu Ly Thảo </a>
     </div>
     <div class="in-slider6-price">
         <ul>
-            <li><p>17.000d</p></li>
+            <li><p>106.000d</p></li>
             <li><p><strike>20.000d</strike></p><div class="price-down"><p>-15%</p></div></li>
         </ul>    
     </div>
@@ -893,31 +776,126 @@
 <div class="in-slider6-picture">
 <div class="in-slider6-picture-product">
 <div class="in-slider6-picture-product-image">
-    <a href="#"><img src="/IMG/in-pic1.jpg"></a>
+    <a href="#"><img src="/IMG/in-pic14.jpg"></a>
 </div>
 <div class="in-slider6-picture-product-image-bottom">
     <div class="in-slider6-title">
-        <a href="#">Thỏ bảy màu và những người nghĩ nó là bạn </a>
+        <a href="#">Chitose - Phiên Bản Giới Hạn </a>
     </div>
     <div class="in-slider6-price">
         <ul>
-            <li><p>17.000d</p></li>
+            <li><p>98.000d</p></li>
             <li><p><strike>20.000d</strike></p><div class="price-down"><p>-15%</p></div></li>
         </ul>    
     </div>
 </div>
 </div>
 </div>
-    </div> 
+<!---------------------------------------->
+<div class="in-slider6-picture">
+    <div class="in-slider6-picture-product">
+    <div class="in-slider6-picture-product-image">
+        <a href="#"><img src="/IMG/in-pic15.jpg"></a>
+    </div>
+    <div class="in-slider6-picture-product-image-bottom">
+        <div class="in-slider6-title">
+            <a href="#">Nhật Ký Ấm Áp - Kỳ Tích Của Chúng Mình </a>
+        </div>
+        <div class="in-slider6-price">
+            <ul>
+                <li><p>108.000d</p></li>
+                <li><p><strike>20.000d</strike></p><div class="price-down"><p>-15%</p></div></li>
+            </ul>    
+        </div>
+    </div>
+    </div>
+    </div>
+    
+    <!---------------------------------------->
+    <div class="in-slider6-picture">
+    <div class="in-slider6-picture-product">
+    <div class="in-slider6-picture-product-image">
+        <a href="#"><img src="/IMG/in-pic16.jpg"></a>
+    </div>
+    <div class="in-slider6-picture-product-image-bottom">
+        <div class="in-slider6-title">
+            <a href="#">Thế Giới Otome Game Thật Khắc Nghiệt</a>
+        </div>
+        <div class="in-slider6-price">
+            <ul>
+                <li><p>123.000d</p></li>
+                <li><p><strike>20.000d</strike></p><div class="price-down"><p>-15%</p></div></li>
+            </ul>    
+        </div>
+    </div>
+    </div>
+    </div>
+    <!---------------------------------------->
+    <div class="in-slider6-picture">
+    <div class="in-slider6-picture-product">
+    <div class="in-slider6-picture-product-image">
+        <a href="#"><img src="/IMG/in-pic17.jpg"></a>
+    </div>
+    <div class="in-slider6-picture-product-image-bottom">
+        <div class="in-slider6-title">
+            <a href="#">Thám Tử Lừng Danh Conan - Phần Đặc Biệt  </a>
+        </div>
+        <div class="in-slider6-price">
+            <ul>
+                <li><p>38.000d</p></li>
+                <li><p><strike>20.000d</strike></p><div class="price-down"><p>-15%</p></div></li>
+            </ul>    
+        </div>
+    </div>
+    </div>
+    </div>
+    <!---------------------------------------->
+    <div class="in-slider6-picture">
+    <div class="in-slider6-picture-product">
+    <div class="in-slider6-picture-product-image">
+        <a href="#"><img src="/IMG/in-pic18.jpg"></a>
+    </div>
+    <div class="in-slider6-picture-product-image-bottom">
+        <div class="in-slider6-title">
+            <a href="#">[LightNovel] OverLord - Tập 18</a>
+        </div>
+        <div class="in-slider6-price">
+            <ul>
+                <li><p>107.000d</p></li>
+                <li><p><strike>20.000d</strike></p><div class="price-down"><p>-15%</p></div></li>
+            </ul>    
+        </div>
+    </div>
+    </div>
+    </div>
+   
+        </section>
+
+        <script>
+            function showCategory(categoryId) {
+                // Hide all categories
+                document.getElementById('category1').style.display = 'none';
+                document.getElementById('category2').style.display = 'none';
+
+                // Show the selected category
+                document.getElementById(categoryId).style.display = 'block';
+            }
+        </script>
+    </div>
+
+<!---------------------------------------->
+    
+       
 
 
-</section>
- </div>
+
+
+
 
     
     
 
-
+<!---
 <div class="page">
     <ul>
         <li><a href="Page1.html">1</a></li>
@@ -926,7 +904,7 @@
         <li><a href="#">4</a></li>
         <li><a href="#">5</a></li>
     </ul>
-</div>
+</div>-->
 <div class="footer">
     <div class="in-footer-top">
         <li> <b>NHÀ SÁCH TRỰC TUYẾN Fahasa</b></li>
@@ -982,6 +960,7 @@
         </div>
 
        
+    </div>
     </div>
 </div>
 
