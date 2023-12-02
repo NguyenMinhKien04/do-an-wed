@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 900px;
-    background: url('login.jpg') no-repeat;
+    background: url('/IMG/login.jpg') no-repeat;
 }
 
 .wrapper {

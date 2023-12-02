@@ -29,3 +29,8 @@ function show() {
     document.getElementById('btnID')
             .style.display = "none";
 }
+
+/*------------------------*/
+function momodal(){
+    document.getElementById("nenmodal-1").classList.toggle("active");
+    }
