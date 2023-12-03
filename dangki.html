@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel=" stylesheet" href="stylefont.css">
-    <link rel=" stylesheet" href="dangki.css">
+    <link rel=" stylesheet" href="/css/dangki.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="./vendor/fontawesome/js/all.min.js"></script>
-    <script src="information.js"></script>
+    <script src="/information.js"></script>
     <title>Register</title>
 </head>
 
@@ -37,47 +37,7 @@
             </div>
         </form>
 
-        <script>
-            function dangKy() {
-                var email = document.getElementById('email').value;
-                var password = document.getElementById('password').value;
-                var confirmPassword = document.getElementById('confirmPassword').value;
-
-                // Kiểm tra xem cả tài khoản và mật khẩu đã được nhập chưa
-                if (!email || !password || !confirmPassword) {
-                    alert("Vui lòng nhập đầy đủ thông tin tài khoản và mật khẩu.");
-                    return;
-                }
-
-                if (password !== confirmPassword) {
-                    alert("Mật khẩu không khớp!");
-                    return;
-                }
-
-
-              
-                var accountStorage = JSON.parse(localStorage.getItem('registeredAccount')) || [];
-              
-                // Kiểm tra xem tài khoản đã tồn tại chưa
-                 for (var i = 0; i < accountStorage.length; i++) {
-                    if (accountStorage[i].email === email) {
-                        alert("Tài khoản đã tồn tại.");
-                        return;
-                    }
-                }
-
-                // Kiểm tra xem tài khoản có phải là admin không
-                var isAdmin = (email === "admin" && password === "admin");
- 
-                var account = { email: email, password: password, isAdmin: isAdmin };
-
-                accountStorage.push(account);
-
-                localStorage.setItem('registeredAccount', JSON.stringify(accountStorage));
-
-                window.location.href = "dangnhap.html";
-            }
-        </script>
+        <script src="js/p.js"></script>
     </div>
 </body>
 
