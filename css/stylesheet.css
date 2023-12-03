@@ -13,7 +13,7 @@ body {
 
 header {
    background-color: #ffffff;
-   color: rgba(255, 255, 255, 0.071)dcd;
+   color: rgba(255, 255, 255, 0.071);
    text-align: center;
 
 }
@@ -140,9 +140,8 @@ text-align: center;
 /*------------------------------------------*/
 /*wrapper*/
 .menu-bar{
-   margin-top: 0;
-   padding-top: 0;
-margin-top: 0;
+   
+background-color:#bea5a5 ;
 width: 100%;
 }
 .menu-bar-content ul{
@@ -150,8 +149,8 @@ width: 100%;
    justify-content: space-evenly;
 }
 .menu-bar-content{
-   
-   background-color:#bea5a5 ;
+   max-width: 1200px;
+   margin: 0 auto; 
    position: relative;
 }
 .menu-bar-content > ul> li{
@@ -173,13 +172,82 @@ width: 100%;
 
 /*---------------------------*/
 
+.in-slider1{
+   width: 100%;
+   background-color: #ffffff;
+}
+.slidebody{
+   
+   display: flex;
+   padding: 10px 0;
+   justify-content:space-between;
+   
+}
+.in-slidebody-right img{
+   width: 100%;
+}
 
+.in-slidebody-left{
+   width: 40%;
+}
+.in-slidebody-left img{
+   width: 100%;
+   display:flex;
+   margin-left: 3px;
+   margin-bottom: 5px;
+}
 
+#slideshow {
+   margin-left: 15px;
+   overflow: hidden;
+   width: 850px;
+ }
+ 
+ .slide-wrapper {
+   width: 9999px;
+   -webkit-animation: Slide 14s ease infinite;
+ }
+ 
+ .slide {
+   
+   float: left;
+   width: 850px;
+ }
+ .slide img{
+   width: 100%;
+ }
+ 
+ @-webkit-keyframes Slide {
+   20% {margin-left: 0px;}
+   30% {margin-left: -850px;}
+   50% {margin-left: -850px;}
+   60% {margin-left: -1700px;}
+   80% {margin-left: -1700px;}
+ }
+
+ /* Mui ten lên dau trang */
+ #backtop {
+   width:60px;
+   height: 60px;
+   background: tomato;
+   color: #ffff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius:50%;
+   position: fixed;
+   bottom: 40px;
+   right: 40px;
+    }
+     
+    #backtop:hover {
+    background-color: rgb(253, 123, 123)
+    }
 /*------------------*/
 .sub-menu{
    position: absolute;
    background-color: rgb(248, 243, 227);
-   width: 1175px;
+   width: 1176px;
    height: auto;
    right: 0px;
    top: 100%;
@@ -258,6 +326,51 @@ width: 100%;
    transform: scale(1.01);
    
 }
+/*-------------------------------------------*/
+
+.sidebar {
+   position: absolute;
+   left: 0;
+   top: 0;
+   height: 100%; /* Chiều cao của sidebar sẽ bằng chiều cao của màn hình */
+   width: 200px; /* Độ rộng của sidebar */
+   background-color: #f0f0f0; /* Màu nền của sidebar */
+   padding: 20px; /* Khoảng cách lề bên trong sidebar */
+}
+
+/* Tùy chỉnh kiểu của select */
+.header__search-select {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 10px;
+}
+
+/*-----------------------------------------*/
+.slider2 {
+   width: 100%;
+   margin-top: 30px;
+
+   display: flex; /* Sử dụng flexbox để xếp các phần tử con */
+}
+
+.in-slider2 {
+   width: 100%;
+   display: flex; /* Sử dụng flexbox để xếp các phần tử con */
+}
+
+.in-slider2-1,
+.in-slider2-2 {
+ 
+   flex: 1; /* Chia đều không gian cho cả hai phần tử con */
+}
+
+.in-slider2-1 img,
+.in-slider2-2 img {
+   width: 100%; /* Đảm bảo hình ảnh điền hết không gian của div */
+   height: auto; /* Duy trì tỉ lệ khung hình */
+}
+
+
 
 /*--------------slider5----------------*/
 
@@ -503,11 +616,17 @@ padding: 5px 0;
 }
 
 /*-------------------------*/
-.in-footer-body{
+.footer{
+   width: 100%;
+
+}
+.in-footer-body {
+   max-width: 1200px;
+   margin: 0 auto; /* Center the content */
    padding: 20px 30px;
-   
    display: flex;
-   justify-content:space-around;
+   flex-wrap: wrap; /* Allow items to wrap to the next line on small screens */
+   justify-content: space-between;
 }
 
 
@@ -552,4 +671,66 @@ padding: 5px 0;
    line-height: 50px;
    text-align: center;
    background-color: rgb(128, 101, 101) ;
+}
+
+/*---------reponsible-------------------*/
+
+
+.in-footer-body-left,
+.in-footer-body-mid,
+.in-footer-body-right {
+   width: 100%; /* Full width on small screens */
+   margin-bottom: 20px; /* Add some space between sections on small screens */
+}
+
+/* ... (rest of your existing styles) */
+
+/* Media query for screens 600px and larger */
+@media screen and (min-width: 600px) {
+   .in-footer-body-left,
+   .in-footer-body-mid,
+   .in-footer-body-right {
+      width: 25%; /* Reset width to original value on larger screens */
+      margin-bottom: 0; /* Remove the space between sections on larger screens */
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .menu-bar-content > ul > li {
+      width: 100%;
+   }
+   .top-right {
+      width: 100%;
+   }
+   /* Add more responsive styles as needed */
+}
+
+@media only screen and (max-width: 768px) {
+   .sub-menu {
+      width: 100%; /* Make the submenu full width on smaller screens */
+   }
+
+   /* ... (Adjust other styles for smaller screens) */
+}
+
+/* Responsive Slider 5 Styling */
+@media only screen and (max-width: 768px) {
+   .slider5 {
+      margin-top: 20px; /* Adjust margin for smaller screens */
+   }
+
+   /* ... (Adjust other styles for smaller screens) */
+}
+
+/* Responsive Slider 6 Styling */
+@media only screen and (max-width: 768px) {
+   .in-slider6-top button {
+      width: 120px; /* Adjust button width for smaller screens */
+   }
+
+   .slider6 {
+      width: 100%; /* Make slider6 full width on smaller screens */
+   }
+
+   /* ... (Adjust other styles for smaller screens) */
 }
