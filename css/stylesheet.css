@@ -284,8 +284,33 @@ text-align: center;
    80% {margin-left: -1700px;}
  }
  
+/* Thêm kiểu cho danh sách dot */
+.dot-list {
+   list-style: none;
+   display: flex;
+   justify-content: center;
+   margin-top: 10px; /* Điều chỉnh khoảng cách giữa slideshow và dot */
+}
+
+/* Thêm kiểu cho dot */
+.dot-list .dot {
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   background-color: #bbb; /* Màu dot chưa được chọn */
+   margin: 0 5px; /* Khoảng cách giữa các dot */
+   cursor: pointer;
+}
+
+/* Thêm kiểu cho dot khi được chọn */
+.dot-list .dot.active {
+   background-color: #555; /* Màu dot khi được chọn */
+}
 
 /*------------------------------*/
+.slider2{
+   margin-top: 20px;
+}
 .in-slider2{
    width: 80rem;
    background-color: rgb(255, 255, 255);

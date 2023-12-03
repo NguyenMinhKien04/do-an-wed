@@ -76,3 +76,7 @@ function momodal(){
         // Show the selected category
         document.getElementById(categoryId).style.display = 'block';
     }
+
+   /*-----------------------------*/
+
+  
