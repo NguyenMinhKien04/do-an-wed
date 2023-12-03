@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookstore</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="./vendor/fontawesome/js/all.min.js" ></script>
+    <script src="/js/main.js"> </script>
     <link rel="stylesheet" href="/css/stylesheet.css">
 </head>
 <body>
@@ -44,11 +46,8 @@
                         </div>
                 
             </div>
-         </div> 
-    </header>
-
-    <main>
-<div class="menu-bar">
+         </div>
+          <div class="menu-bar">
         <div class="menu-bar-content">
             <ul>
                 <li><a href="#"><i class="fa-solid fa-book"></i> Văn học trong nước <span class="menu-bar-content-icon"> <i class="fa-solid fa-caret-down"></i></span></a>
@@ -207,7 +206,45 @@
             </ul>
         </div>
         </div>
-        <!----------------------------------Backtop--------------------------->
+
+        <div id="backtop">
+            <i class="fa-solid fa-arrow-up"></i>
+            
+        </div>
+    </header>
+
+    <main>
+        <!------------------------------->
+        
+        <!----------------------------------slider1--------------------------->
+        <div class="slider1">
+            <div class="in-slider1">
+                <div class="slidebody">
+                    <div class="in-slidebody-left">
+                        <a href="#"><img src="/IMG/left-top.jpg"></a>
+                        <a href="#"><img src="/IMG/slide2.jpg"></a>
+                    </div>
+                    <div class="in-slidebody-right">
+                        <div id="slideshow">
+                            <div class="slide-wrapper">
+                                <div class="slide">
+                                    <a href="#"><img src="/IMG/slide1.jpg" ></a>
+                                </div>
+                                <div class="slide">
+                                    <a href="#"><img src="/IMG/slide2.jpg" ></a>
+                                </div>
+                                <div class="slide">
+                                    <a href="#"><img src="/IMG/slide3.jpg"></a>
+                                </div>
+                                <div class="slide">
+                                    <a href="#"><img src="/IMG/slide4.jpg" ></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
       
     <!------------------------------------------------------------------>
         <div class="slider5">
@@ -416,6 +453,19 @@
         </section>
             </div>
         </div>
+        <!----------------------------------------------->
+        <div class="slider2">
+            <div class="in-slider2">
+                <div class="in-slider2-1">
+                    <img src="/IMG/slide6.png">
+                </div>
+                <div class="in-slider2-2">
+                    <img src="/IMG/slide7.png">
+                </div>
+            </div>
+        </div>
+        
+        
 
 
         <!------------------------------------------>
@@ -737,6 +787,7 @@
                     // Show the selected category
                     document.getElementById(categoryId).style.display = 'block';
                 }
+                
             </script>
         </div>
     </main>
@@ -793,7 +844,7 @@
         <p>&copy; 2023 Bookstore</p>
     </div>
    
-        
+     
     </footer>
 </body>
 </html>
