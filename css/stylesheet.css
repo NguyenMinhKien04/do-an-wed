@@ -46,7 +46,7 @@ img {
 
 
 .in-top{
-   background-color: rgb(18,134,96);
+  
    display: flex;
    justify-content: center;
 }
@@ -96,7 +96,7 @@ img {
     color: #000;
 }
 .top-right-item{
- 
+   color: black;
     margin-top: 5px;
    width: 20%;
 text-align: center;
@@ -155,7 +155,7 @@ width: 100%;
 }
 .menu-bar-content > ul> li{
    list-style: none;
-   width: 25%;
+   width: 33.3%;
    height: 40px;
    line-height: 40px;
    text-align: center;
@@ -173,7 +173,7 @@ width: 100%;
 /*---------------------------*/
 
 .in-slider1{
-   width: 100%;
+   width: 80rem;
    background-color: #ffffff;
 }
 .slidebody{
@@ -181,10 +181,7 @@ width: 100%;
    display: flex;
    padding: 10px 0;
    justify-content:space-between;
-   
-}
-.in-slidebody-right img{
-   width: 100%;
+   width: 80em;
 }
 
 .in-slidebody-left{
@@ -224,7 +221,6 @@ width: 100%;
    60% {margin-left: -1700px;}
    80% {margin-left: -1700px;}
  }
-
  /* Mui ten lên dau trang */
  #backtop {
    width:60px;
@@ -413,11 +409,9 @@ width: 75em;
    padding: 30px 17px;
    border-radius: 2px;
    border: 1px solid rgb(206, 206, 206);
-   border-left: none;
+
 }
-.slider-product-one-content-item:nth-last-child(1){
-   border-right: none;
-}
+
 
 .slider-product-one-content-item a> img{
    width: 100%;
@@ -430,24 +424,22 @@ width: 75em;
 }
 
 
-.slider-product-one-content-item-text li:nth-child(3){
-   color:rgb(255, 126, 41)
+.slider-product-one-content-item-text li:nth-child(2){
+   color:rgb(192, 20, 28)
+}
+
+.slider-text1 a{
+   text-decoration: none;
+   color: #000;
 }
 
 
-.slider-text1 li a{
-   width: 50px;
-   color: black;
-}
 
 .slider-text2 li a{
    color: rgb(9, 141, 9);
 }
 
-.slider-text1 li a:hover{
-   text-decoration: underline;
-   color: rgb(56, 59, 240);
-}
+
 
 .slider-text2 li a:hover{
    text-decoration: underline;

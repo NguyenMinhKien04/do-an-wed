@@ -42,6 +42,19 @@ function dangKy() {
     window.location.href = "dangnhap.html";
 }
 
+// hien thi mat khau
+function togglePassword(inputId) {
+    var passwordField = document.getElementById(inputId);
+    var showPasswordIcon = document.querySelector('#' + inputId + ' + .show-password i');
+
+    if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        showPasswordIcon.className = 'bx bx-hide';
+    } else {
+        passwordField.type = 'password';
+        showPasswordIcon.className = 'bx bx-show';
+    }
+}
 
 function dangNhap() {
     var emailDangNhap = document.getElementById('emailDangNhap').value;

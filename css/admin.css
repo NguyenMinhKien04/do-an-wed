@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+}
+
+.left {
+    flex: 0 0 20%; /* Adjust the width of the left section */
+    background-color: #f1f1f1; /* Optional: Add a background color */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.in-left {
+    padding: 20px; /* Adjust the padding as needed */
+}
+
+.right {
+    flex: 1;
+    padding: 20px; /* Adjust the padding as needed */
+}
+
+.big-menu {
+    background-color: #ffffff; 
+}
+
+.in-big-menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px; 
+    box-sizing: border-box;
+    border-bottom:1px solid brown ;
+}
+
+.logo {
+    width: 20%;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.account {
+    width: 20%; /* Adjust as needed */
+}
+
+.account p {
+    text-align: right; /* Align the text to the right side */
+    /* Add your styling properties here if needed */
+}
