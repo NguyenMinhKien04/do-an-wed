@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .in-right {
+            /* Add your styles for .in-right container if needed */
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        button {
+            padding: 5px 10px;
+           
+        }
+        button:hover{
+             cursor: pointer;
+        }
+        .icon-cell {
+            display:flex;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+
+<div class="in-right">
+    <div class="in-right-body">
+        <div class="in-right-body-top">
+            <button onclick="addCategory()">Thêm danh mục</button>
+        </div>
+        <div class="table" id="categoryTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tên danh mục</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Existing or dynamically added rows will go here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    function addCategory() {
+        // Get the table body element
+        var tableBody = document.querySelector('#categoryTable tbody');
+
+        // Create a new row
+        var newRow = document.createElement('tr');
+
+        // Add cells with input fields for ID, category name, and action
+        addCell(newRow, 'id');
+        addCell(newRow, 'name');
+        addActionCell(newRow);
+
+        // Append the new row to the table body
+        tableBody.appendChild(newRow);
+    }
+
+    function addCell(row, type) {
+        var cell = document.createElement('td');
+        var input = document.createElement('input');
+        input.type = 'text';
+        input.placeholder = 'Enter ' + type.charAt(0).toUpperCase() + type.slice(1); // Capitalize the first letter
+        cell.appendChild(input);
+        row.appendChild(cell);
+    }
+
+    function addActionCell(row) {
+        var cell = document.createElement('td');
+        cell.className = 'icon-cell';
+
+        // Edit icon
+        var editIcon = document.createElement('i');
+        editIcon.className = 'fas fa-pencil';
+        editIcon.addEventListener('click', function() {
+            // Handle edit action here
+            alert('Edit clicked');
+        });
+        cell.appendChild(editIcon);
+
+        // Delete icon
+        var deleteIcon = document.createElement('i');
+        deleteIcon.className = 'fas fa-trash';
+        deleteIcon.addEventListener('click', function() {
+            // Handle delete action here
+            alert('Delete clicked');
+        });
+        cell.appendChild(deleteIcon);
+
+        row.appendChild(cell);
+    }
+</script>
+
+</body>
+</html>

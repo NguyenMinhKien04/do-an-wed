@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+a{
+    text-decoration: none;
+}
 body {
     font-family: 'Arial', sans-serif;
     display: flex;
@@ -21,9 +23,34 @@ main {
     background-color: #f1f1f1; /* Optional: Add a background color */
     overflow-y: auto; /* Enable vertical scrolling if needed */
 }
+.left {
+    width: 200px; /* Set the width of the container */
+}
 
 .in-left {
-    padding: 20px; /* Adjust the padding as needed */
+    overflow: hidden; /* Hide the overflow to create a mask */
+}
+
+.task1
+ {
+    white-space: nowrap; /* Prevent text from wrapping */
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+.task1:hover {
+    background-color: rgb(212, 212, 232);
+    transform: translateX(-5px); /* Slide 5px to the left on hover */
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+.in-left p{
+    padding: 20px; 
+    
 }
 
 .right {
