@@ -1,3 +1,25 @@
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get query parameters from the URL
+        var queryString = window.location.search;
+        var urlParams = new URLSearchParams(queryString);
+
+        // Retrieve product details from query parameters
+        var cartProduct = {
+            imageUrl: urlParams.get('image') || '',
+            title: urlParams.get('title') || '',
+            quantity: urlParams.get('quantity') || ''
+        };
+
+        // Display the product details on the cart page
+        document.getElementById('cartProductImage').src = cartProduct.imageUrl;
+        document.getElementById('cartProductTitle').textContent = cartProduct.title;
+        document.getElementById('cartProductQuantity').textContent = cartProduct.quantity;
+    });
+
+
+
+
 var cart = {};
 
 function updateQuantity(productId, action) {

@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Set the href attribute based on the product's category
         switch (product.category) {
             case "1":
-                productLink.href = "product1.html";
+                productLink.href = "product.html";
                 break;
             case "2":
                 productLink.href = "product2.html";

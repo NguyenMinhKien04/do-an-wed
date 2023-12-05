@@ -61,7 +61,7 @@ function dangNhap() {
     var passwordDangNhap = document.getElementById('passwordDangNhap').value;
 
     var accountString = localStorage.getItem('registeredAccount');
-
+    
     // Kiểm tra xem cả tài khoản và mật khẩu đã được nhập chưa
     if (!emailDangNhap || !passwordDangNhap) {
         alert("Vui lòng nhập đầy đủ thông tin tài khoản và mật khẩu.");
@@ -76,20 +76,44 @@ function dangNhap() {
     var accounts = JSON.parse(accountString);
 
     for (var i = 0; i < accounts.length; i++) {
-          // truoc : là kiểu gọi khi vd: accounts[i].email// hieu dai khai la khi goi nhu vay no se lay gia tri la email sau dau : de so sanh, giong nhu boolean
-          // sau dau : là var và emailDangNhap cx la var nen suy ra var la gia tri,,,...
+        // Check if the current account matches the entered email and password
         if (accounts[i].email === emailDangNhap && accounts[i].password === passwordDangNhap) { 
-            //khi goi ben login accounts[i].isAdmin phai goi truoc dau : de kiem tra, sau dau : la kiểu boolean
+            // If the account is an admin
             if (accounts[i].isAdmin) {
                 alert("Đăng nhập với quyền admin!");
+                // Redirect to the admin page
                 window.location.href = "https://www.facebook.com/profile.php?id=100021947714995";
             } else {
+                // If the account is a regular user
                 alert("Đăng nhập thành công!");
-                window.location.href = "web1.html";
+                // Redirect to the regular user page
+                window.location.href = "web.html";
             }
+            
+            // Set the logged-in user's name in local storage
+            localStorage.setItem('loggedInUserName', accounts[i].email);
+            
+            // Exit the loop once a matching account is found
             return;
         }
     }
+    
+    // If no matching account is found, show an error alert
+    alert("Đăng nhập không thành công. Vui lòng kiểm tra lại thông tin đăng nhập.");
+    
 
     alert("Đăng nhập không thành công. Vui lòng kiểm tra lại thông tin đăng nhập.");
 }
+function updateLoggedInUser() {
+    var loggedInUserName = localStorage.getItem('loggedInUserName');
+    if (loggedInUserName) {
+        // User is logged in, update the HTML
+        var userNameElement = document.getElementById('userName');
+        if (userNameElement) {
+            userNameElement.textContent = loggedInUserName;
+        }
+    }
+}
+
+// Call the function when the page loads
+updateLoggedInUser();

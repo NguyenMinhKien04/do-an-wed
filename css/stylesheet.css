@@ -139,35 +139,54 @@ text-align: center;
 
 /*------------------------------------------*/
 /*wrapper*/
-.menu-bar{
-   
-background-color:#bea5a5 ;
-width: 100%;
+.menu-bar {
+   background-color: #bea5a5;
+   width: 100%;
 }
-.menu-bar-content ul{
-   display: flex;
-   justify-content: space-evenly;
-}
-.menu-bar-content{
+
+.menu-bar-content {
    max-width: 1200px;
-   margin: 0 auto; 
+   margin: 0 auto;
    position: relative;
 }
-.menu-bar-content > ul> li{
+
+.menu-bar-content ul {
+   display: flex;
+   justify-content: space-around; /* Change to space-around for even horizontal spacing */
+   padding: 0;
+}
+
+.menu-bar-content > ul > li {
    list-style: none;
-   width: 33.3%;
    height: 40px;
    line-height: 40px;
    text-align: center;
 }
-.menu-bar-content a{
+
+.menu-bar-content a {
    text-decoration: none;
    color: #000;
+   display: block;
 }
-.menu-bar-content li:hover{
-   background-color:rgb(160, 99, 99);
+
+.menu-bar-content li:hover {
+   background-color: rgb(160, 99, 99);
    transition: 0.3s;
 }
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+   .menu-bar-content ul {
+       flex-direction: column; /* Stack items vertically on smaller screens */
+       align-items: center; /* Center items vertically */
+   }
+
+   .menu-bar-content > ul > li {
+       width: 100%;
+       margin-bottom: 5px;
+   }
+}
+
 
 
 /*---------------------------*/
