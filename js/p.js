@@ -111,6 +111,7 @@ function dangNhap() {
     alert("Đăng nhập không thành công. Vui lòng kiểm tra lại thông tin đăng nhập.");
 }
 
+//so sanh admin va nguoi dung
 document.addEventListener('DOMContentLoaded', function () {
     var loggedInUserString = localStorage.getItem('loggedInUser');
 
