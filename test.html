@@ -24,14 +24,12 @@
 
         button {
             padding: 5px 10px;
-           
+            cursor: pointer;
         }
-        button:hover{
-             cursor: pointer;
-        }
-        .icon-cell {
-            display:flex;
-            justify-content: space-evenly;
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
         }
     </style>
 </head>
@@ -45,14 +43,34 @@
         <div class="table" id="categoryTable">
             <table>
                 <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Tên danh mục</th>
-                        <th>Hành động</th>
-                    </tr>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên danh mục</th>
+                    <th>Hành động</th>
+                </tr>
                 </thead>
                 <tbody>
-                    <!-- Existing or dynamically added rows will go here -->
+                <!-- Predefined categories -->
+                <tr>
+                    <td>1</td>
+                    <td contenteditable="true">Văn học nước ngoài</td>
+                    <td><i class="fas fa-pencil"></i> <i class="fas fa-trash"></i></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td contenteditable="true">Văn học trong nước</td>
+                    <td><i class="fas fa-pencil"></i> <i class="fas fa-trash"></i></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td contenteditable="true">Truyện tranh tiểu thuyết</td>
+                    <td><i class="fas fa-pencil"></i> <i class="fas fa-trash"></i></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td contenteditable="true">Sách giáo khoa</td>
+                    <td><i class="fas fa-pencil"></i> <i class="fas fa-trash"></i></td>
+                </tr>
                 </tbody>
             </table>
         </div>
@@ -67,46 +85,25 @@
         // Create a new row
         var newRow = document.createElement('tr');
 
-        // Add cells with input fields for ID, category name, and action
-        addCell(newRow, 'id');
-        addCell(newRow, 'name');
-        addActionCell(newRow);
+        // Add cells for ID, editable category name, and action icons
+        addCell(newRow, '5'); // Auto-increment the ID
+        addCell(newRow, '', 'name'); // Editable category name
+        addCell(newRow, '<i class="fas fa-pencil"></i> <i class="fas fa-trash"></i>', 'action'); // Action icons
 
         // Append the new row to the table body
         tableBody.appendChild(newRow);
     }
 
-    function addCell(row, type) {
+    function addCell(row, value, type) {
         var cell = document.createElement('td');
-        var input = document.createElement('input');
-        input.type = 'text';
-        input.placeholder = 'Enter ' + type.charAt(0).toUpperCase() + type.slice(1); // Capitalize the first letter
-        cell.appendChild(input);
-        row.appendChild(cell);
-    }
-
-    function addActionCell(row) {
-        var cell = document.createElement('td');
-        cell.className = 'icon-cell';
-
-        // Edit icon
-        var editIcon = document.createElement('i');
-        editIcon.className = 'fas fa-pencil';
-        editIcon.addEventListener('click', function() {
-            // Handle edit action here
-            alert('Edit clicked');
-        });
-        cell.appendChild(editIcon);
-
-        // Delete icon
-        var deleteIcon = document.createElement('i');
-        deleteIcon.className = 'fas fa-trash';
-        deleteIcon.addEventListener('click', function() {
-            // Handle delete action here
-            alert('Delete clicked');
-        });
-        cell.appendChild(deleteIcon);
-
+        if (type === 'action') {
+            cell.innerHTML = value;
+        } else if (type === 'name') {
+            cell.contentEditable = true;
+            cell.textContent = value;
+        } else {
+            cell.textContent = value;
+        }
         row.appendChild(cell);
     }
 </script>

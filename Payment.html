@@ -1,399 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookstore</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="./vendor/fontawesome/js/all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./vendor/fontawesome/js/all.min.js" ></script>
     <script src="/js/main.js"> </script>
     <link rel="stylesheet" href="/css/stylesheet.css">
     <link rel="stylesheet" href="/css/payment.css">
-    <link rel="stylesheet" href="/css/cart.css">
 </head>
-
 <body>
     <header>
-
-
-        <div class="big-menu">
-
-
+        
+        
+            <div class="big-menu">
+        
+                
             <div class="in-big-menu">
                 <div class="logo">
-                    <a href="web.html" onclick="momodal()"><img src="/IMG/logo.jpg"></a>
-                </div>
-
-
-                <div class="top-right-sub-menu">
-                    <i class="fa-solid fa-bars"></i>
-                    <p>Danh mục</p>
-                </div>
-
+                    <a href="#" onclick="momodal()"><img src="/IMG/logo.jpg"></a></div>
+             
+                    
+                        <div class="top-right-sub-menu">
+                         <i class="fa-solid fa-bars"></i><p>Danh mục</p>
+                        </div>
+       
                 <div class="box">
                     <div class="container-1">
                         <span class="icon"><i class="fa fa-search"></i></span>
                         <input type="search" id="search" placeholder="Search..." />
                     </div>
                 </div>
-
-
-
+        
+                  
+                    
                 <div class="top-right-item">
                     <a href="dangki.html" id="accountLink">
                         <i class="fa-solid fa-user"></i>
                         <p id="userName">Tài khoản</p>
                     </a>
                 </div>
-
-
-                <div class="top-right-item">
-                    <a href="/cart.html"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
-                    <p>Giỏ hàng</p>
-                </div>
-
+                
+                       
+                        <div class="top-right-item">
+                            <a href = "/cart.html"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+                            <p>Giỏ hàng</p>
+                        </div>
+                
             </div>
+         </div>
+          <div class="menu-bar">
+        <div class="menu-bar-content">
+            <ul>
+                <li><a href="web1.html"><i class="fa-solid fa-book"></i>Danh mục sản phẩm</a>
+
+            </li>
+                <li><a href=#><i class="fa-solid fa-paintbrush"></i>Chương trình khuyến mãi</a>
+</li>
+
+                
+                <li><a href="#"><i class="fa-solid fa-gift"></i>Cộng tác viên</a></li>
+                
+                
+            </ul>
         </div>
-        <div class="menu-bar">
-            <div class="menu-bar-content">
-                <ul>
-                    <li><a href="web1.html"><i class="fa-solid fa-book"></i>Danh mục sản phẩm</a>
-
-                    </li>
-                    <li><a href=#><i class="fa-solid fa-paintbrush"></i>Chương trình khuyến mãi</a>
-                    </li>
-
-
-                    <li><a href="#"><i class="fa-solid fa-gift"></i>Cộng tác viên</a></li>
-
-
-                </ul>
-            </div>
         </div>
 
         <div id="backtop">
             <i class="fa-solid fa-arrow-up"></i>
-
+            
         </div>
     </header>
 
     <main>
-        <div class="popup" id="popup">
-            <div class="in-popup">
-                <div class="in-popup-top">
-                    <img src="/IMG/in-popup.png">    
-                </div>
-                <div class="in-popup-bottom">
-                    <p>THANH TOÁN THÀNH CÔNG</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="popup-false" id="popup-false">
-            <div class="in-popup">
-                <div class="in-popup-top">
-                    <img src="/IMG/dau cheo.png">    
-                </div>
-                <div class="in-popup-bottom">
-                    <p>VUI LÒNG ĐIỀN LẠI THÔNG TIN</p>
-                </div>
-            </div>
-        </div>
-        <div class="slider5">
-           
-                <div class="in-checkout-top">
-                    <h3>ĐỊA CHỈ GIAO HÀNG</h3>
-                </div>
-                <div class="checkout">
-                    <div class="in-checkout">
-                        <div class="in-check-out-bottom">
-                            
-                            <div class="in-check-out-name">
-                                <label for="name">Họ và tên người nhận</label>
-                                <input type="text" id="name" pattern="[a-zA-Z\s]+" placeholder="Nhập không dấu" required>
-                            </div>
-                            <div class="in-check-out-phone">
-                                <label for="phoneNumber">Số điện thoại</label>
-                                <input type="tel" id="phoneNumber" pattern="[0-9]+"minlength="10" placeholder="Nhập đủ 10 số" required>
-                            </div>
-                            <div class="in-check-out-address">
-                                <label for="deliveryAddress">Địa chỉ nhận hàng</label>
-                                <input type="text" id="deliveryAddress" placeholder="Nhập không dấu" required>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </div>
-
-        <div class="slider5">
-           
-            <div class="in-checkout-top">
-                <h3>PHƯƠNG THỨC VẬN CHUYỂN</h3>
-            </div>
-            <form>
-                <div class="transport">
-                    <div class="in-transport-bottom">
-                        <label>
-                            <h4>Giao hàng tiêu chuẩn</h4>
-                            <input type="radio" id="standard" name="deliveryType" onchange="setDeliveryTime('standard')">
-                            <span id="deliveryTimeDisplayStandard"></span>
-                        </label>
-                    </div>
-                    
-                    <div class="in-transport-bottom">
-                        <label>
-                            <h4>Giao hàng tiết kiệm</h4>
-                            <input type="radio" id="economy" name="deliveryType" onchange="setDeliveryTime('economy')">
-                            <span id="deliveryTimeDisplayEconomy"></span>
-                        </label>
-                    </div>
-                </div>
-            </form>
-    </div>
-
-    <div class="slider5">
-           
-        <div class="in-checkout-top">
-            <h3>PHƯƠNG THỨC THANH TOÁN</h3>
-        </div>
-        <div class="transport">
+        <div class="checkout">
             <div class="in-checkout">
-
-                <div class="in-transport-bottom">
-                    <form action="" class="info-nhan-hang" onclick="total()">
-                        <input type="radio" id="zalopay" name="choice" value="ZaloPay">
-                        <label for="zalopay"><img src="/IMG/pay1.png" style="width:40px;height:24px"><span>APPLE PAY</span></label>
-                        <br><br>
-                        <input type="radio" id="vnpay" name="choice" value="VNPAY">
-                        <label for="vnpay"><img src="/IMG/pay2.png" style="width:40px;height:24px"><span>VNPAY</span></label>
-                        <br><br>
-                        <input type="radio" id="shopeepay" name="choice" value="ShopeePay">
-                        <label for="shopeepay"><img src="/IMG/pay3.png" style="width:40px;height:24px"><span>Ví MOMO</span></label>
-                        <br><br>
-                        <input type="radio" id="momo" name="choice" value="Momo">
-                        <label for="momo"><img src="/IMG/pay4.png" style="width:40px;height:24px"><span>ONEPAY</span></label>
-                        <br><br>
-                        <input type="radio" id="atm" name="choice" value="ATM">
-                        <label for="atm"><img src="/IMG/pay5.webp" style="width:40px;height:24px"><span>ZaloPay</span></label>
-                        <br><br>
-                        <input type="radio" id="money" name="choice" value="Money">
-                        <label for="money"><img src="/IMG/pay6.png" style="width:40px;height:24px"><span>Thanh toán bằng tiền mặt khi nhận hàng</span></label>
-                        <br>
-                    </form>
+                <div class="in-checkout-top">
+                    <h3>Địa chỉ giao hàng</h3>
                 </div>
-                
-            </div>
-        </div>
-</div>
-
-
-<div class="slider5">
-           
-    <div class="in-checkout-top">
-        <h3>KIỂM TRA LẠI ĐƠN HÀNG</h3>
-    </div>
-    <div class="transport">
-        <div class="in-checkout">
-
-            <div class="in-transport-bottom">
-                <div class="in-slider1-product" id="product1">
-                    <div class="product-left">
-                        <img src="/IMG/in-pic1.jpg">
+                <div class="in-check-out-bottom">
+                    <div class="in-check-out-name">
+                       
+                        <input type="text" id="recipientName">
                     </div>
-                    <div class="product-title">
-                        <p>Thỏ bảy màu và những người nghĩ nó là bạn</p>
+                    <div class="in-check-out-phone">
+                        <label for="phoneNumber">Số điện thoại</label>
+                        <input type="tel" id="phoneNumber">
                     </div>
-                    <div class="product-mid">
-                            <p>1</p>
+                    <div class="in-check-out-address">
+                        <label for="deliveryAddress">Địa chỉ nhận hàng</label>
+                        <input type="text" id="deliveryAddress">
                     </div>
-                    <div class="product-mid">
-                        <p>19.000 đ</p>
-                    </div>
-
-                    <div class="product-price">
-                        <p>19.000 đ</p>
-                    </div>
-                    
-                </div>
-            </div>
-
-            <div class="in-transport-bottom">
-                <div class="in-slider1-product" id="product1">
-                    <div class="product-left">
-                        <img src="/IMG/in-pic2.jpg">
-                    </div>
-                    <div class="product-title">
-                        <p>Và rồi, tháng 9 khôn có cậu đã tới</p>
-                    </div>
-                    <div class="product-mid">
-                            <p>2</p>
-                    </div>
-                    <div class="product-mid">
-                        <p>38.000 đ</p>
-                    </div>
-
-                    <div class="product-price">
-                        <p class="total">76.000 đ</p>
-                    </div>
-                    
-                </div>
-            </div>
-
-            <div class="in-transport-bottom">
-                <div class="in-slider1-product" id="product1">
-                    <div class="product-left">
-                        <img src="/IMG/in-pic3.jpg">
-                    </div>
-                    <div class="product-title">
-                        <p>Tôi thấy hoa vàng trên cỏ xanh</p>
-                    </div>
-                    <div class="product-mid">
-                            <p>3</p>
-                    </div>
-                    <div class="product-mid">
-                        <p>51.000 đ</p>
-                    </div>
-
-                    <div class="product-price">
-                        <p>153.000 đ</p>
-                    </div>
-                    
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-
-
-
-        <!------------------------------------------------------>
-
     </main>
+    
     <footer>
-        <div class="footer">
-            <div class="in-footer-body1">
-                <div class="in-footer-price">
-                    <div class="in-footer-price-top">
-                        <p>Thành tiền</p><span><p>248.000đ</p></span>
-                    </div>
-
-                    <div class="in-footer-price-mid">
-                        <p>Phí vận chuyển</p><span><p>10.000đ</p></span>
-                    </div>
-                    <div class="in-footer-price-total">
-                        <p>Tổng tiền</p><span><p>258.000đ</p></span>
-                    </div>
-                </div>
+    <div class="footer">
+       
+    
+        <div class="in-footer-body">
+            <div class="in-footer-body-left">
+                <p>Phương thức thanh toán</p>
+                <li><img src="/IMG/pay1.png"></li>
+                <li><img src="/IMG/pay2.png"></li>
+                <li><img src="/IMG/pay3.png"></li>
+                <li><img src="/IMG/pay4.png"></li>
+                <li><img src="/IMG/pay5.webp"></li>
             </div>
-            <div class="out">
-                <a href="/cart.html"><div class="return"><p>Trở lại</p></div></a>
-                <button class="show-popup-button" onclick="confirmPayment()">Xác nhận thanh toán</button>
+    
+            <div class="in-footer-body-mid">
+                <p>Tài khoản của bạn</p>
+                <li><a href="">Cập nhật tài khoản</a></li>
+                <li><a href="">Giỏ hàng</a></li>
+                <li><a href="">Lịch sử giao dịch</a></li>
+                <li><a href="">Sản phẩm yêu thích</a></li>
+                <li><a href="">Kiểm tra đơn hàng</a></li>
             </div>
-        </div>
-
+    
+            <div class="in-footer-body-mid">
+                <p>GOODREADS</a>
+                <li><a href="/gioi_thieu.html">Giới thiệu GOODREADS</a></li>
+                <li><a href="">GOODREADS trên Facebook</a></li>
+                <li><a href="">Liên hệ GOODREADS</a></li>
+                <li><a href="">Đặt hàng theo yêu cầu</a</li>
+            </div>
+             <div class="in-footer-body-right">
+                <p>Kết nối với chúng tôi</p>
+                <li><a href="#"><img src="/IMG/contact1.webp"></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100066245906401"><img src="/IMG/contact2.webp"></a></li>
+                <li><a href="#"><img src="/IMG/contact3.webp"></a></li>
+                <li><a href="#"><img src="/IMG/contact4.webp"></a></li>
+                <li><a href="#">Liên hệ hợp tác kinh doanh</a></li>
+                <li><a href="#">Tuyển dụng</a></li><br>
+                <li><a href="#">Chính sách đổi - trả</a></li>
+                <li><a href="#">Chính sách bồi hoàn</a></li>
+                <li><a href="#">Câu hỏi thường gặp (FAQs)</a></li>
+    
+    
+    
+            </div>
+            </div>
+    
+           
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Bookstore</p>
+    </div>
+   
+     
     </footer>
-
-    <script>
-      
-
-  
-
-      document.addEventListener("DOMContentLoaded", function() {
-    var popup = document.getElementById('popup');
-    var falsePopup = document.getElementById('popup-false');
-    var confirmButton = document.querySelector('.show-popup-button');
-
-    confirmButton.addEventListener('click', function() {
-        var nameInput = document.getElementById('name');
-        var phoneNumberInput = document.getElementById('phoneNumber');
-        var addressInput = document.getElementById('deliveryAddress');
-
-        // Kiểm tra dữ liệu nhập
-        if (!nameInput.checkValidity()) {
-            showFalsePopup('Vui lòng điền lại thông tin');
-        }
-
-        if (!phoneNumberInput.checkValidity()) {
-            showFalsePopup('Vui lòng điền lại thông tin');
-        }
-
-        if (!addressInput.checkValidity()) {
-            showFalsePopup('Vui lòng điền lại thông tin');
-        }
-
-        // Kiểm tra tất cả các trường để quyết định hiển thị popup chính hay không
-        if (nameInput.checkValidity() && phoneNumberInput.checkValidity() && addressInput.checkValidity()) {
-            popup.classList.add('active');
-
-            setTimeout(function() {
-                popup.classList.add('fade-out');
-                setTimeout(function() {
-                    popup.classList.remove('active', 'fade-out');
-                }, 500);
-            }, 2000);
-        }
-    });
-
-    function showFalsePopup(message) {
-        var falsePopupMessage = falsePopup.querySelector('.in-popup-bottom p');
-        falsePopupMessage.textContent = message;
-
-        // Hiển thị popup thông báo bằng cách thêm lớp 'active'
-        falsePopup.classList.add('active');
-
-        // Đặt thời gian chờ và sau đó tự động tắt popup
-        setTimeout(function() {
-            falsePopup.classList.add('fade-out');
-            setTimeout(function() {
-                falsePopup.classList.remove('active', 'fade-out');
-            }, 500);
-        }, 2000);
-    }
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-            // Gọi hàm setDeliveryTime để hiển thị thời gian ngay khi trang tải
-            setDeliveryTime('standard');
-            setDeliveryTime('economy'); // Thêm dòng này để hiển thị thời gian mặc định cho Giao hàng tiết kiệm
-        });
-
-        function setDeliveryTime(deliveryType) {
-            var deliveryTimeDisplay;
-
-            if (deliveryType === 'standard') {
-                deliveryTimeDisplay = document.getElementById('deliveryTimeDisplayStandard');
-            } else if (deliveryType === 'economy') {
-                deliveryTimeDisplay = document.getElementById('deliveryTimeDisplayEconomy');
-            }
-
-            if (deliveryTimeDisplay) {
-                // Tính toán thời gian giao hàng tương ứng
-                var currentTime = new Date();
-                var deliveryTime = new Date(currentTime);
-                if (deliveryType === 'economy') {
-                    deliveryTime.setDate(currentTime.getDate() + 2); // Cộng thêm 2 ngày
-                }
-
-                // Hiển thị thời gian dưới dạng "ngày/tháng"
-                var formattedTime = formatTime(deliveryTime);
-                deliveryTimeDisplay.textContent = 'Thời gian giao hàng: ' + formattedTime;
-            }
-        }
-
-        function formatTime(date) {
-            var day = date.getDate();
-            var month = date.getMonth() + 1; // Tháng bắt đầu từ 0
-            return (day < 10 ? '0' : '') + day + '/' + (month < 10 ? '0' : '') + month;
-        }
-
-    </script>
-
-
-
 </body>
-
 </html>
