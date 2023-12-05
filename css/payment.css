@@ -1,0 +1,285 @@
+
+
+.checkout {
+    background-color: white;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+input {
+    height: 30px;
+    line-height: 30px; /* Hoặc giá trị mong muốn (vd: 300px) */
+    box-sizing: border-box; /* Bao gồm padding và border trong tính toán chiều rộng */
+}
+.in-checkout{
+    width: 50%;
+}
+.in-checkout-top h3{
+    margin-left: 0;
+}
+.in-checkout-top{
+    width: 96%;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 20px;
+    border-bottom: 2px solid brown;
+}
+.in-check-out-bottom {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* 100% width to fill the container */
+}
+
+/* Style for each form row (label and input) */
+.in-check-out-name,
+.in-check-out-phone,
+.in-check-out-address {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Style for labels */
+.in-check-out-bottom label {
+    width: 40%; /* Increase label width */
+    
+    font-size: 18px; /* Increase font size if needed */
+}
+
+/* Style for input fields */
+.in-check-out-bottom input {
+    border: 1px solid rgb(179, 179, 179);
+    width: 80%; /* Adjust input width accordingly */
+    box-sizing: border-box;
+    font-size: 18px; /* Increase font size if needed */
+}
+.in-transport-top{
+    height: 40px;
+    line-height: 40px;
+  
+    border-bottom: 2px solid brown;
+}
+
+.transport input{
+    background-color: brown;
+}
+
+.in-transport-bottom {
+    margin-top: 20px;
+    margin-left: 9px;
+    background-color: white;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.in-transport-bottom img{
+    vertical-align: middle;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+
+input[type="radio"] {
+    transform: scale(1.5); /* Chọn tỉ lệ phóng to mong muốn, ví dụ 1.5 là 150% */
+    margin-right: 5px; /* Để tạo khoảng cách giữa radio và hình ảnh */
+}
+
+.in-transport-bottom span{
+    margin-left: 10px;
+}
+.in-product{
+    border: none;
+}
+.slider5:nth-last-child(1){
+    margin-bottom: 200px
+}
+
+
+.footer {
+    z-index: 0;
+    background-color: #f2f2f2;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.product-price{
+    font-weight: bold;
+}
+.in-footer-body1 {
+    max-width: 1200px; /* Giới hạn kích thước của nội dung trong footer là 1200px */
+    margin: 0 auto; /* Để căn giữa nội dung bên trong */
+    display: flex;
+    justify-content:right;
+
+}
+
+.in-footer-price {
+    width: 30%;
+}
+
+.in-footer-price p {
+    margin: 0;
+}
+
+.in-footer-price-top,
+.in-footer-price-mid,
+.in-footer-price-total {
+ 
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: right; /* Chỉnh văn bản sang phải */
+}
+.in-footer-price-total{
+    font-weight: bold;
+}
+.in-footer-price-total p:nth-last-child(1){
+    color: rgb(255, 81, 0);
+}
+
+.out {
+    padding: 10px 0;
+    border-top: 1px solid gray;
+    max-width: 1200px;
+    margin: 0 auto; /* Để căn giữa nội dung bên trong */
+    display: flex;
+    justify-content: space-between;
+}
+
+.return{
+    padding: 10px 20px; /* Tùy chỉnh padding cho nút */
+    background-color: rgb(101, 101, 101);
+    border-radius: 5px; /* Tùy chỉnh màu nền */
+    color: #fff; /* Tùy chỉnh màu chữ */
+    cursor: pointer;
+}
+.out {
+    display: flex;
+    
+    align-items: center;
+ 
+}
+.return:hover{
+    background-color: rgb(167, 167, 167);
+}
+
+.in-popup-top img{
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.popup,.popup-false {
+    display: none; /* Initially hide the popup */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Ensure the popup is on top */
+    animation: fadeIn 0.5s ease-out; /* Sử dụng animation cho hiệu ứng fade-in */
+}
+.popup-false .fade-out,
+.popup.fade-out {
+    animation: fadeOut 0.5s ease-in; /* Sử dụng animation cho hiệu ứng fade-out */
+}
+
+/* Styles for the inner content of the popup */
+.in-popup {
+    text-align: center;
+}
+
+/* Styles for the top section of the popup */
+.in-popup-top img {
+    width: 50px; /* Adjust the image size as needed */
+}
+
+/* Styles for the bottom section of the popup */
+.in-popup-bottom p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Add styles to make the popup visible */
+.popup-false.active,
+.popup.active {
+    display: block;
+}
+
+.show-popup-button{
+    background-color: brown;
+    color: white;
+    padding: 15px 30px; /* Kích thước nút */
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px; /* Kích thước chữ */
+    
+    box-sizing: border-box;
+}
+
+.show-popup-button:hover{
+    background-color: rgb(205, 86, 86);
+}
+
+/*--------------------------------------------------*/
+
+@media only screen and (max-width: 1200px){
+    .checkout,.in-transport-bottom{
+        width: 1100px;
+    }
+}
+
+@media only screen and (max-width: 1120px){
+    .checkout,.in-transport-bottom{
+        width: 950px;
+    }
+}
+
+@media only screen and (max-width: 950px){
+    .checkout,.in-transport-bottom{
+        width: 800px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .checkout,.in-transport-bottom{
+        width: 600px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .checkout,.in-transport-bottom{
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .checkout,.in-transport-bottom{
+        width: 200px;
+    }
+}
